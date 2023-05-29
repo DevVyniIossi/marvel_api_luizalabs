@@ -1,0 +1,8 @@
+node_modules
+build
+public
+dist
+lib
+cypress
+src/config
+src/setupTests.js
