@@ -75,7 +75,7 @@ Neste repositório você encontrará a solução do desafio proposto pela LuizaL
 ```
 Acesse link abaixo para ver o projeto rodando:
 
-https://marvel-api-luizalabs.netlify.app/
+<link>https://marvel-api-luizalabs.netlify.app/</link>
 ```
 
 ## Como executar:
