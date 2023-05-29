@@ -8,7 +8,7 @@ import { ListHeroes } from 'components/Layout';
 import { ButtonOrderByName, ButtonShowFavorites } from 'components/UI';
 import * as S from './styles';
 
-const getHeroes = async (setHook, setIsLoadingHook, query = 'limit=20') => {
+const getHeroes = async (setHook, setIsLoadingHook, query = 'limit=50') => {
   const { results } = await getCharacters(query);
   setHook((prevState) => {
     return { ...prevState, heroes: results };
@@ -22,7 +22,7 @@ const SectionHeroes = () => {
   const [heroesFoundInSearchQuantity, setHeroesFoundInSearchQuantity] = useState(0);
 
   const { search } = useContext(SearchContext);
-  const debouncedSearch = useDebounce(search, 500);
+  const debouncedSearch = useDebounce(search, 300);
   const isSearchFieldEmpty = !debouncedSearch || debouncedSearch === '';
 
   const [storedFavoriteCharacters, setStoredFavoriteCharacters] = useLocalStorage(

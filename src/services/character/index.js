@@ -1,4 +1,5 @@
 import config from 'config';
+import md5 from 'md5';
 
 const { REACT_APP_MARVEL_BASE_URL, REACT_APP_MARVEL_PUBLIC_KEY } = config;
 
@@ -11,7 +12,12 @@ const getCharacter = async (id) => {
 
   const characterPath = '/v1/public/characters/';
   const apikey = `?apikey=${REACT_APP_MARVEL_PUBLIC_KEY}`;
-  const fullUrl = `${REACT_APP_MARVEL_BASE_URL}${characterPath}${id}${apikey}`;
+  const ts = '123';
+  const hash = md5(
+    '1230e54c975cb955ad213cd356c217c1fc7d2a66747fb209159b4e6b5b42b1f93585a4e32fa'
+  );
+  // eslint-disable-next-line max-len
+  const fullUrl = `${REACT_APP_MARVEL_BASE_URL}${characterPath}${id}${apikey}&ts=${ts}&hash=${hash}`;
 
   const response = await fetch(fullUrl);
   const content = await response.json();

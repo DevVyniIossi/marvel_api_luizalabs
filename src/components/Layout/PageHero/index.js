@@ -10,12 +10,17 @@ import {
   isHeroAmongFavorites,
 } from 'utils/helpers';
 import { getCharacter, getComics } from 'services';
-import { ButtonFavorite, Container } from 'components/UI';
+import { ButtonFavorite, Container, Search } from 'components/UI';
 import { Footer, Header, SectionComics } from 'components/Layout';
 import { Book } from 'images/icons';
+import { Video } from 'images/icons';
 import * as S from './styles';
+import { HeroesListContext, SearchContext } from 'contexts';
+import React, { useContext } from 'react';
 
 const PageHero = ({ match }) => {
+  const { heroesList } = useContext(HeroesListContext);
+  const { search, setSearch } = useContext(SearchContext);
   const {
     params: { heroId },
   } = match;
@@ -90,6 +95,14 @@ const PageHero = ({ match }) => {
   return (
     <S.WrapperPageHero data-testid="HP_PAGEHERO">
       <Header variant="secondary" />
+      <S.SearchContainer>
+        <Search
+          disabled={heroesList.hearted}
+          value={search}
+          setValue={setSearch}
+          variant={match}
+        />
+      </S.SearchContainer>
       <Container as="main" aria-label="Detalhes do herói">
         {isObjectFilled(characterDetails) && (
           <>
@@ -133,6 +146,15 @@ const PageHero = ({ match }) => {
                       <span>{characterDetails.comics.available}</span>
                     </S.ComicsContent>
                   </S.Comics>
+                  <S.Movies>
+                    <S.MoviesTitle>
+                      <strong>Filmes</strong>
+                    </S.MoviesTitle>
+                    <S.MoviesContent data-testid="HP_MOVIES">
+                      <Video data-icon="icon-svg" />
+                      <span>{characterDetails.series.available}</span>
+                    </S.MoviesContent>
+                  </S.Movies>
                 </S.Events>
                 <S.LastComic>
                   <S.LastComicTitle data-testid="HP_LAST_COMIC">

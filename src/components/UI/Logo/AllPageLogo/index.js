@@ -1,4 +1,4 @@
-import { SuperHeroLogo } from 'images/logos';
+import { SuperHeroLogo } from 'images/logos/AllPageLogo';
 import * as S from './styles';
 
 const Logo = () => {

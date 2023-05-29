@@ -82,9 +82,9 @@ export const ComicsContent = styled.div`
   display: flex;
 
   [data-icon='icon-svg'] {
-    height: 16px;
+    height: 30px;
     margin-right: 0.25rem;
-    width: 16px;
+    width: 30px;
   }
 `;
 
@@ -107,4 +107,27 @@ export const Image = styled.img`
     margin-right: 0;
     width: auto;
   `}
+`;
+
+export const SearchContainer = styled.div`
+  width: 40%;
+  position: relative;
+  left: 30%;
+`;
+
+export const Movies = styled.div``;
+
+export const MoviesContent = styled.div`
+  align-items: center;
+  display: flex;
+
+  [data-icon='icon-svg'] {
+    height: 30px;
+    margin-right: 0.25rem;
+    width: 30px;
+  }
+`;
+
+export const MoviesTitle = styled.strong`
+  display: block;
 `;
