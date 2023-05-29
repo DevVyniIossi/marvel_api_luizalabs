@@ -35,6 +35,10 @@ describe('Verifica componentes estipulados pelo layout', () => {
       .should('be.visible');
 
     cy
+      .get('[data-testid="HP_MOVIES"]')
+      .should('be.visible');
+
+    cy
       .get('[data-testid="HP_LAST_COMIC"]')
       .should('be.visible');
 
