@@ -69,6 +69,14 @@ Neste repositório você encontrará a solução do desafio proposto pela LuizaL
   ●   Valorizamos muito testes em nosso processo de desenvolvimento;
 
   ●   Aqui no LuizaLabs todos os desenvolvedores podem participar do processo de avaliação técnica então oriente os avaliadores a como instalar, testar e executar seu código.
+  
+  ## DEMO do site:
+  
+```
+Acesse link abaixo para ver o projeto rodando:
+
+https://marvel-api-luizalabs.netlify.app/
+```
 
 ## Como executar:
 
