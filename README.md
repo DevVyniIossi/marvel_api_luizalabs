@@ -72,11 +72,11 @@ Neste repositório você encontrará a solução do desafio proposto pela LuizaL
   
   ## DEMO do site:
   
-```
+
 Acesse link abaixo para ver o projeto rodando:
 
-<link>https://marvel-api-luizalabs.netlify.app/</link>
-```
+https://marvel-api-luizalabs.netlify.app/
+
 
 ## Como executar:
 
